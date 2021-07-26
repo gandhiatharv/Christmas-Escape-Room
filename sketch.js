@@ -51,10 +51,10 @@ function draw() {
     }
   }
 
-  if(spacecraft.y < 205 && spacecraft.x > 340 && spacecraft.x < 345) {
+if(spacecraft.y <= (iss.y+70) && spacecraft.x <= (iss.x-10)){
     hasDocked = true;
-    fill("white");
-    textSize(40);
-    text("Docking Successful!", 220, 350);
+    textSize(25);
+    fill("white")
+    text("Docking Successful!", 200, 300);
   }
 }
