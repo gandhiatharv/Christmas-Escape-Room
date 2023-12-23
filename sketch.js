@@ -52,7 +52,7 @@ swordGroup=new Group();
 
 function draw() {
 
-  if (treasureCollection>=2000){
+  if (treasureCollection>=2300){
     window.location.href = "level1end.html";
   }
 
@@ -118,7 +118,7 @@ function draw() {
   drawSprites();
   textSize(20);
   fill(255);
-  text("Treasure: "+ treasureCollection+"\nAVOID THE SWORDS, GOAL: COLLECT 2000",40,40);
+  text("Treasure: "+ treasureCollection+"\nAVOID THE SWORDS, GOAL: COLLECT 2300",40,40);
   
 }
 
@@ -157,9 +157,9 @@ function createJwellery() {
 
 function createSword(){
   if (path.velocityY>=20){
-    blanky=40
+    blanky=27
   } else{
-  blanky=60-(path.velocityY)    
+  blanky=45-(path.velocityY)    
   }
   if (World.frameCount % blanky == 0) {
   var sword = createSprite(Math.round(random(100, width-100),40, 10, 10));
