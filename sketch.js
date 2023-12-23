@@ -156,10 +156,10 @@ function createJwellery() {
 }
 
 function createSword(){
-  if (path.velocityY>=20){
-    blanky=27
+  if (path.velocityY>=25){
+    blanky=30
   } else{
-  blanky=45-(path.velocityY)    
+  blanky=55-(path.velocityY)    
   }
   if (World.frameCount % blanky == 0) {
   var sword = createSprite(Math.round(random(100, width-100),40, 10, 10));
