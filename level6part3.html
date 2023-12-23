@@ -32,7 +32,7 @@
   
     <link rel="stylesheet" type="text/css" href="style.css">
 <br>
-    <label for="secretMessage">Write answers in this format (no spaces): #,#,#,#,#,#</label>
+    <label for="secretMessage">Write answers in this format (no spaces) with the answer for each riddle in consecutive order: #,#,#,#,#,#</label>
     <input type="text" id="secretMessage" placeholder="Type the secret message here">
     <button onclick="checkSecretMessage()">Check Message</button>
     <p id="result"></p>
@@ -44,7 +44,7 @@
             var enteredMessage = document.getElementById("secretMessage").value;
     
             // Secret message to compare
-            var secretMessage = "BOOK";
+            var secretMessage = "1122,400,-26.7,1694,4010,24";
     
             // Check if the entered message matches the secret message
             if (enteredMessage.trim().toUpperCase() === secretMessage) {
