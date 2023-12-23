@@ -52,7 +52,7 @@ swordGroup=new Group();
 
 function draw() {
 
-  if (treasureCollection>=2300){
+  if (treasureCollection>=2050){
     window.location.href = "level1end.html";
   }
 
@@ -118,7 +118,7 @@ function draw() {
   drawSprites();
   textSize(20);
   fill(255);
-  text("Treasure: "+ treasureCollection+"\nAVOID THE SWORDS, GOAL: COLLECT 2300",40,40);
+  text("Treasure: "+ treasureCollection+"\nAVOID THE SWORDS, GOAL: COLLECT 2050",40,40);
   
 }
 
