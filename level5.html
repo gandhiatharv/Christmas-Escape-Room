@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to the Escape Room!</title>
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="pigeon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="pigeon.png"
+  />
+  <h1>
+    Level 5
+  </h1>
+  <h2>
+     <br>
+  </h2>
+  <h2>
+    THERE'S A CATCH! FIRST FIND THE RIGHT CODE TO ACCESS THE LEVEL<br>
+  </h2>
+
+
+    <script src="sweetalert.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="sweetalert.css">
+  
+    <link rel="stylesheet" type="text/css" href="style.css">
+<br>
+    <label for="secretMessage">Enter the Secret Message ALL CAPS NO PUNCUTATION:</label>
+    <input type="text" id="secretMessage" placeholder="Type the secret message here">
+    <button onclick="checkSecretMessage()">Check Message</button>
+    <p id="result"></p>
+
+    <script>
+        // JavaScript function to check the secret message
+        function checkSecretMessage() {
+            // Get the value from the text input
+            var enteredMessage = document.getElementById("secretMessage").value;
+    
+            // Secret message to compare
+            var secretMessage = "POOP";
+    
+            // Check if the entered message matches the secret message
+            if (enteredMessage.trim().toUpperCase() === secretMessage) {
+                // Redirect to abcya.com
+                window.location.href = "level5real.html";
+            } else {
+                // Display "Incorrect" message
+                document.getElementById("result").innerHTML = "Incorrect";
+            }
+        }
+    </script>
+</head>
+<body>
+
+
+  
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to the Escape Room!</title>
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="pigeon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="pigeon.png"
+  />
+  <h1>
+    Level 5
+  </h1>
+  <h2>
+    Decode the cryptogram<br>
+  </h2>
+  <h2>
+    Say the secret code from the word search to unlock level 6<br>
+  </h2>
+  <img src="hint0.png" alt="Image x">
+
+
+    <script src="sweetalert.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="sweetalert.css">
+  
+    <link rel="stylesheet" type="text/css" href="style.css">
+<br>
+<button onclick="showHint()">Hint 1</button>
+<img id="hintImage" src="hint1.png" alt="Hint 1" style="display:none;">
+
+<script>
+    // JavaScript function to show the hint image
+    function showHint() {
+        // Get the image element
+        var hintImage = document.getElementById("hintImage");
+
+        // Set the source of the image
+        hintImage.src = "hint1.png";
+
+        // Display the image by setting its style to "block"
+        hintImage.style.display = "block";
+    }
+</script>
+<button onclick="showHint2()">Hint 2</button>
+<img id="hintImage" src="hint2.png" alt="Hint 2" style="display:none;">
+
+<script>
+    // JavaScript function to show the hint image
+    function showHint2() {
+        // Get the image element
+        var hintImage = document.getElementById("hintImage");
+
+        // Set the source of the image
+        hintImage.src = "hint2.png";
+
+        // Display the image by setting its style to "block"
+        hintImage.style.display = "block";
+    }
+</script>
+
+<button onclick="showHint3()">Hint 3</button>
+<img id="hintImage" src="hint3.png" alt="Hint 3" style="display:none;">
+
+<script>
+    // JavaScript function to show the hint image
+    function showHint3() {
+        // Get the image element
+        var hintImage = document.getElementById("hintImage");
+
+        // Set the source of the image
+        hintImage.src = "hint3.png";
+
+        // Display the image by setting its style to "block"
+        hintImage.style.display = "block";
+    }
+</script>
+<br>
+    <label for="secretMessage">Enter the Secret Message ALL CAPS NO PUNCUTATION:</label>
+    <input type="text" id="secretMessage" placeholder="Type the secret message here">
+    <button onclick="checkSecretMessage()">Check Message</button>
+    <p id="result"></p>
+
+    <script>
+        // JavaScript function to check the secret message
+        function checkSecretMessage() {
+            // Get the value from the text input
+            var enteredMessage = document.getElementById("secretMessage").value;
+    
+            // Secret message to compare
+            var secretMessage = "HAVE YOU EVER NOTICED HOW PARENTS CAN GO FROM THE MOST WONDERFUL PEOPLE IN THE WORLD TO TOTALLY EMBARRASSING IN THREE SECONDS";
+    
+            // Check if the entered message matches the secret message
+            if (enteredMessage.trim().toUpperCase() === secretMessage) {
+                // Redirect to abcya.com
+                window.location.href = "level5end.html";
+            } else {
+                // Display "Incorrect" message
+                document.getElementById("result").innerHTML = "Incorrect";
+            }
+        }
+    </script>
+</head>
+<body>
+
+
+  
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to the Escape Room!</title>
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="pigeon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="pigeon.png"
+  />
+  <h1>
+    Level 6
+  </h1>
+  <h2>
+    Figure out the riddle to unlock level 6.4<br>
+  </h2>
+  <h4>
+    At dawn's first light, I'm not a bird in flight,<br>
+Yet with each sunrise, I bring delight.<br>
+I don't chirp or sing, I don't soar high,<br>
+But in the morning glow, I catch your eye.<br>
+<br>
+In the garden's embrace, I'm not a bloom,<br>
+Yet I ward off shadows and dispel the gloom.<br>
+I don't sway with breezes or drink the rain,<br>
+But in your yard, I'm a steadfast gain.<br>
+<br>
+As the day unfolds, on desks I stand,<br>
+A silent worker in a busy land.<br>
+I don't type or file, I don't make a sound,<br>
+But in your office, stability is found.<br>
+<br>
+At the dining table, I'm not a plate,<br>
+Yet I hold a story, tempting and great.<br>
+I don't bear food or cutlery's gleam,<br>
+But in my pages, adventures teem.<br>
+<br>
+When stars emerge and the sky turns deep,<br>
+I don't twinkle, and I don't make a peep.<br>
+I'm not the moon nor a constellation bright,<br>
+But in your hands, I bring dreams to light.<br>
+<br>
+In the bedroom's calm, as night descends,<br>
+I'm not a pillow, and I'm not a friend.<br>
+I don't comfort with a cozy embrace,<br>
+But on your shelf, I find my space.<br>
+<br>
+What am I?
+<br>
+
+
+
+
+
+      </h4>
+  
+
+    <script src="sweetalert.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="sweetalert.css">
+  
+    <link rel="stylesheet" type="text/css" href="style.css">
+<br>
+    <label for="secretMessage">What object is this riddle referring too? Only one word. ALL CAPS NO PUNCUTATION:</label>
+    <input type="text" id="secretMessage" placeholder="Type the secret message here">
+    <button onclick="checkSecretMessage()">Check Message</button>
+    <p id="result"></p>
+
+    <script>
+        // JavaScript function to check the secret message
+        function checkSecretMessage() {
+            // Get the value from the text input
+            var enteredMessage = document.getElementById("secretMessage").value;
+    
+            // Secret message to compare
+            var secretMessage = "BOOK";
+    
+            // Check if the entered message matches the secret message
+            if (enteredMessage.trim().toUpperCase() === secretMessage) {
+                // Redirect to abcya.com
+                window.location.href = "level6part3.html";
+            } else {
+                // Display "Incorrect" message
+                document.getElementById("result").innerHTML = "Incorrect";
+            }
+        }
+    </script>
+</head>
+<body>
+
+
+  
+</body>
+</html>

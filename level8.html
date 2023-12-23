@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to the Escape Room!</title>
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="pigeon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="pigeon.png"
+  />
+  <h1>
+    Level 8
+  </h1>
+  </h2>
+  <img src="abc.png" alt="Image abc">
+
+
+    <script src="sweetalert.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="sweetalert.css">
+  
+    <link rel="stylesheet" type="text/css" href="style.css">
+<br>
+    <label for="secretMessage">Enter the number:</label>
+    <input type="text" id="secretMessage" placeholder="Type the secret message here">
+    <button onclick="checkSecretMessage()">Check Message</button>
+    <p id="result"></p>
+
+    <script>
+        // JavaScript function to check the secret message
+        function checkSecretMessage() {
+            // Get the value from the text input
+            var enteredMessage = document.getElementById("secretMessage").value;
+    
+            // Secret message to compare
+            var secretMessage = "38";
+    
+            // Check if the entered message matches the secret message
+            if (enteredMessage.trim().toUpperCase() === secretMessage) {
+                // Redirect to abcya.com
+                window.location.href = "level8end.html";
+            } else {
+                // Display "Incorrect" message
+                document.getElementById("result").innerHTML = "Incorrect";
+            }
+        }
+    </script>
+</head>
+<body>
+
+
+  
+</body>
+</html>

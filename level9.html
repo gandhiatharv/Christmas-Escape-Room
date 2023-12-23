@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to the Escape Room!</title>
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="pigeon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="pigeon.png"
+  />
+  <h1>
+    Level 9
+  </h1>
+  <h2>
+    Lock Combination Mystery
+  </h2>
+  <h3>
+    You are a spy working for the CIA. You need to first go through this lock to diffuse a bomb.
+    <br>
+    There are a few clues around the room for you to use.
+    <br>
+    Go through the room and find the 3 different sets of hints throughout the room.
+    <br>this is how to find out the lock code<br>The lock combination number is 4 digits: (the 3rd digit in the 2nd number), (the 1st digit in the third number), (the 3rd digit in the first number), (the squared value of the 3rd digit in the 2nd number)
+  </h3>
+  </h2>
+  <img src="lockpic.jpeg" alt="Image lock" height="300px"><br>
+
+
+    <script src="sweetalert.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="sweetalert.css">
+  
+    <link rel="stylesheet" type="text/css" href="style.css">
+<br>
+    <label for="secretMessage">Enter the number:</label>
+    <input type="text" id="secretMessage" placeholder="Type the secret message here">
+    <button onclick="checkSecretMessage()">Check Message</button>
+    <p id="result"></p>
+
+    <script>
+        // JavaScript function to check the secret message
+        function checkSecretMessage() {
+            // Get the value from the text input
+            var enteredMessage = document.getElementById("secretMessage").value;
+    
+            // Secret message to compare
+            var secretMessage = "2544";
+    
+            // Check if the entered message matches the secret message
+            if (enteredMessage.trim().toUpperCase() === secretMessage) {
+                // Redirect to abcya.com
+                window.location.href = "level9end.html";
+            } else {
+                // Display "Incorrect" message
+                document.getElementById("result").innerHTML = "Incorrect";
+            }
+        }
+    </script>
+</head>
+<body>
+
+
+  
+</body>
+</html>
+

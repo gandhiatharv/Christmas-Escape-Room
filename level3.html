@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to the Escape Room!</title>
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="pigeon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="pigeon.png"
+  />
+  <h1>
+    Level 3
+  </h1>
+  <h2>
+    Do the word search here<br>
+  </h2>
+  <a href="https://miro.com/welcomeonboard/R3lMZU56eW1JMVhDbmFrcFNuckVBbGFOb2FWUzZQa1RSUGNWWXpranZrdUVEVEZnUmJTb29xeEpCYktKaTNCVnwzNDU4NzY0NTc0MDkxNTgxNDU0fDI=?share_link_id=201393435757"><button>WORD SEARCH</button></a>
+  <h2>
+    Say the secret code from the word search to unlock level 4<br>
+  </h2>
+  <label for="secretMessage">Enter the Secret Message ALL CAPS NO PUNCTUATION:</label>
+    <input type="text" id="secretMessage" placeholder="Type the secret message here">
+    <button onclick="checkSecretMessage()">Check Message</button>
+    <p id="result"></p>
+
+    <script>
+        // JavaScript function to check the secret message
+        function checkSecretMessage() {
+            // Get the value from the text input
+            var enteredMessage = document.getElementById("secretMessage").value;
+    
+            // Secret message to compare
+            var secretMessage = "AT CHRISTMAS LOVE ILLUMINATES EVERYTHING TURNING MOMENTS INTO TIMELESS MEMORIES THAT WARM OUR HEARTS THROUGHOUT THE YEAR IN THE GLOW OF LOVE THE TRUE MAGIC OF CHRISTMAS RESIDES CREATING A TAPESTRY OF JOY THAT LASTS A LIFETIME";
+    
+            // Check if the entered message matches the secret message
+            if (enteredMessage.trim().toUpperCase() === secretMessage) {
+                // Redirect to abcya.com
+                window.location.href = "level3end.html";
+            } else {
+                // Display "Incorrect" message
+                document.getElementById("result").innerHTML = "Incorrect";
+            }
+        }
+    </script>
+
+    <script src="sweetalert.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="sweetalert.css">
+  
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    
+</head>
+<body>
+
+
+  
+</body>
+</html>
