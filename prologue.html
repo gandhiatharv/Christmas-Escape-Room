@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gettin' Excited...</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .question {
+            margin-top: 20px;
+        }
+
+        .choices {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button.selected {
+            background-color: purple;
+            color: #fff;
+        }
+
+        #getStartedButton {
+            background-color: #3498db;
+            color: #fff;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gettin' Excited...</h1>
+
+        <div class="question">
+            <p>Who will be Agent Poops?</p>
+            <div class="choices">
+                <button class="button" onclick="selectAnswer(this)">Aarti</button>
+                <button class="button" onclick="selectAnswer(this)">Mitul</button>
+                <button class="button" onclick="selectAnswer(this)">Oviya</button>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Who will be Ambassador Whoops?</p>
+            <div class="choices">
+                <button class="button" onclick="selectAnswer(this)">Aarti</button>
+                <button class="button" onclick="selectAnswer(this)">Mitul</button>
+                <button class="button" onclick="selectAnswer(this)">Oviya</button>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Who will be Colonel Farts?</p>
+            <div class="choices">
+                <button class="button" onclick="selectAnswer(this)">Aarti</button>
+                <button class="button" onclick="selectAnswer(this)">Mitul</button>
+                <button class="button" onclick="selectAnswer(this)">Oviya</button>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Are you excited for the escape room?</p>
+            <div class="choices">
+                <button class="button" onclick="selectAnswer(this)">Yes</button>
+                <button class="button" onclick="selectAnswer(this)">No</button>
+            </div>
+        </div>
+
+        <button id="getStartedButton" class="button" onclick="redirectToGame()">GET STARTED WITH LEVEL 1!</button>
+    </div>
+
+    <script>
+        function selectAnswer(button) {
+            // Remove 'selected' class from all buttons in the same question
+            const question = button.closest('.question');
+            const buttons = question.querySelectorAll('.button');
+            buttons.forEach(btn => btn.classList.remove('selected'));
+
+            // Add 'selected' class to the clicked button
+            button.classList.add('selected');
+        }
+
+        function redirectToGame() {
+            window.location.href = "game.html";
+        }
+    </script>
+</body>
+</html>
